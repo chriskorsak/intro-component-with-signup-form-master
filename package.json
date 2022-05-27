@@ -1,0 +1,19 @@
+{
+  "name": "intro-component-with-signup-form-master",
+  "version": "1.0.0",
+  "description": "Intro component with sign up form coding challenge",
+  "main": "index.js",
+  "homepage": "https://chriskorsak.github.io/intro-component-with-signup-form-master",
+  "private": true,
+  "scripts": {
+    "sass": "sass --watch scss:dist/css",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^4.0.0",
+    "sass": "^1.52.1"
+  }
+}
