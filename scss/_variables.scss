@@ -1,0 +1,21 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+// font-family: 'Poppins', sans-serif;
+
+// colors
+$primaryColor: hsl(0, 100%, 74%);
+$secondaryColor: hsl(154, 59%, 51%);
+$accentColor: hsl(248, 32%, 49%);
+$neutralColor1: hsl(249, 10%, 26%);
+$neutralColor2: hsl(246, 25%, 77%);
+$whiteColor: #fff;
+$dropShadowColor: desaturate(darken($primaryColor, 15%), 40%);
+
+// width
+$websiteWidth: 1440px;
+
+// border radius
+$borderRadius: 10px;
+
+// spacer (used in utilities scss)
+$spacer: 1rem;
