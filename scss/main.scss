@@ -40,6 +40,7 @@ a {
 main.container {
   max-width: $websiteWidth;
   overflow: hidden;
+  padding: 1.5rem;
 }
 
 section#signup-a {
@@ -52,6 +53,7 @@ section#signup-b {
   .offer {
     background-color: $accentColor;
     border-radius: $borderRadius;
+    padding: 1.5rem 3.5rem;
   }
 }
 
@@ -69,6 +71,9 @@ section#signup-b {
 
   input {
     border: 1px solid $neutralColor2;
+    &::placeholder {
+      font-weight: 600;
+    }
   }
 
   button {
@@ -77,6 +82,7 @@ section#signup-b {
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+    letter-spacing: 0.1rem;
 
     &:hover {
       opacity: 0.8;
@@ -85,5 +91,8 @@ section#signup-b {
 
   .disclaimer {
     color: $neutralColor2;
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding: 0 0.8rem;
   }
 }
