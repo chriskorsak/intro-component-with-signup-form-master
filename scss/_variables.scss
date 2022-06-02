@@ -12,10 +12,7 @@ $whiteColor: #fff;
 $dropShadowColor: desaturate(darken($primaryColor, 15%), 40%);
 
 // width
-$websiteWidth: 1440px;
+$websiteWidth: 1100px;
 
 // border radius
 $borderRadius: 10px;
-
-// spacer (used in utilities scss)
-$spacer: 1rem;

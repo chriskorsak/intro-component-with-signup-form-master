@@ -6,6 +6,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  &:focus {
+    outline: 1px solid $accentColor;
+  }
 }
 
 // general styles
@@ -40,12 +43,17 @@ a {
 main.container {
   max-width: $websiteWidth;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 3.5rem 1.5rem;
 }
 
 section#signup-a {
+  margin-bottom: 2rem;
   h1 {
     font-size: 2rem;
+    margin-top: 2rem;
+  }
+  p {
+    margin: 1rem;
   }
 }
 
@@ -53,26 +61,32 @@ section#signup-b {
   .offer {
     background-color: $accentColor;
     border-radius: $borderRadius;
-    padding: 1.5rem 3.5rem;
+    padding: 1.2rem 3.5rem;
   }
 }
 
 #signup-form {
   background-color: $whiteColor;
   border-radius: $borderRadius;
+  margin-top: 2rem;
+  padding: 1.5rem;
 
   input,
   button {
     width: 100%;
-    padding: 1rem;
     margin: 0.7rem 0;
     border-radius: 5px;
   }
 
   input {
     border: 1px solid $neutralColor2;
+    padding: 1rem;
     &::placeholder {
       font-weight: 600;
+    }
+    // remove top margin on first input
+    &:first-of-type {
+      margin: 0 0 0.7rem 0;
     }
   }
 
@@ -82,6 +96,7 @@ section#signup-b {
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+    padding: 1.2rem;
     letter-spacing: 0.1rem;
 
     &:hover {
@@ -93,6 +108,40 @@ section#signup-b {
     color: $neutralColor2;
     font-size: 0.7rem;
     font-weight: 400;
-    padding: 0 0.8rem;
+    padding: 0 1.2rem;
+
+    a {
+      font-weight: 600;
+    }
+  }
+}
+
+// styles for landscape tablets and desktop
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  main.container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 0;
+    margin: 1rem;
+  }
+
+  section#signup-a {
+    text-align: left;
+    align-self: center;
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  section#signup-b {
+    padding: 0.5rem 0;
+  }
+  #signup-form {
+    padding: 2rem;
   }
 }

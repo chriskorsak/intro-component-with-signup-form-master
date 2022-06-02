@@ -1,99 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-.m-1 {
-  margin: 1rem;
-}
-.m-2 {
-  margin: 2rem;
-}
-.m-3 {
-  margin: 3rem;
-}
-.m-4 {
-  margin: 4rem;
-}
-
-.mx-1 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-.mx-2 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.mx-3 {
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-.mx-4 {
-  margin-left: 4rem;
-  margin-right: 4rem;
-}
-
-.my-1 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.my-2 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.my-3 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-.my-4 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
-.p-1 {
-  padding: 1rem;
-}
-.p-2 {
-  padding: 2rem;
-}
-.p-3 {
-  padding: 3rem;
-}
-.p-4 {
-  padding: 4rem;
-}
-
-.px-1 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.px-2 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.px-3 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-.px-4 {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
-.py-1 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.py-2 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-.py-3 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-.py-4 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .bold {
   font-weight: 700;
 }
@@ -106,6 +12,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+*:focus {
+  outline: 1px solid hsl(248deg, 32%, 49%);
 }
 
 html {
@@ -134,37 +43,49 @@ a {
 }
 
 main.container {
-  max-width: 1440px;
+  max-width: 1100px;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 3.5rem 1.5rem;
 }
 
+section#signup-a {
+  margin-bottom: 2rem;
+}
 section#signup-a h1 {
   font-size: 2rem;
+  margin-top: 2rem;
+}
+section#signup-a p {
+  margin: 1rem;
 }
 
 section#signup-b .offer {
   background-color: hsl(248deg, 32%, 49%);
   border-radius: 10px;
-  padding: 1.5rem 3.5rem;
+  padding: 1.2rem 3.5rem;
 }
 
 #signup-form {
   background-color: #fff;
   border-radius: 10px;
+  margin-top: 2rem;
+  padding: 1.5rem;
 }
 #signup-form input,
 #signup-form button {
   width: 100%;
-  padding: 1rem;
   margin: 0.7rem 0;
   border-radius: 5px;
 }
 #signup-form input {
   border: 1px solid hsl(246deg, 25%, 77%);
+  padding: 1rem;
 }
 #signup-form input::placeholder {
   font-weight: 600;
+}
+#signup-form input:first-of-type {
+  margin: 0 0 0.7rem 0;
 }
 #signup-form button {
   background-color: hsl(154deg, 59%, 51%);
@@ -172,6 +93,7 @@ section#signup-b .offer {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  padding: 1.2rem;
   letter-spacing: 0.1rem;
 }
 #signup-form button:hover {
@@ -181,7 +103,40 @@ section#signup-b .offer {
   color: hsl(246deg, 25%, 77%);
   font-size: 0.7rem;
   font-weight: 400;
-  padding: 0 0.8rem;
+  padding: 0 1.2rem;
+}
+#signup-form .disclaimer a {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  main.container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 0;
+    margin: 1rem;
+  }
+
+  section#signup-a {
+    text-align: left;
+    align-self: center;
+  }
+  section#signup-a h1 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+  section#signup-a p {
+    margin: 0;
+  }
+
+  section#signup-b {
+    padding: 0.5rem 0;
+  }
+
+  #signup-form {
+    padding: 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
