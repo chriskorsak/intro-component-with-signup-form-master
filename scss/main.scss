@@ -71,11 +71,37 @@ section#signup-b {
   margin-top: 2rem;
   padding: 1.5rem;
 
+  .form-control {
+    margin: 0.7rem 0;
+    position: relative;
+    // remove top margin on first input
+    &:first-of-type {
+      margin: 0 0 0.7rem 0;
+    }
+    &.error::after {
+      content: '';
+      position: absolute;
+      background: url('../images/icon-error.svg') no-repeat;
+      z-index: 10;
+      top: 13px;
+      right: 30px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
   input,
   button {
     width: 100%;
-    margin: 0.7rem 0;
     border-radius: 5px;
+  }
+
+  // this selects the possible error or success message paragraph
+  input + p,
+  button + p {
+    text-align: right;
+    font-style: italic;
+    font-size: 0.8rem;
   }
 
   input {
@@ -84,9 +110,8 @@ section#signup-b {
     &::placeholder {
       font-weight: 600;
     }
-    // remove top margin on first input
-    &:first-of-type {
-      margin: 0 0 0.7rem 0;
+    &.error-outline {
+      outline: 2px solid $primaryColor;
     }
   }
 
@@ -105,11 +130,12 @@ section#signup-b {
   }
 
   .disclaimer {
+    margin-top: 0.5rem;
     color: $neutralColor2;
     font-size: 0.7rem;
     font-weight: 400;
     padding: 0 1.2rem;
-
+    text-align: center;
     a {
       font-weight: 600;
     }
