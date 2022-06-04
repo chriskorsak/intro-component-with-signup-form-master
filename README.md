@@ -34,7 +34,7 @@ Acceptance Criteria:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-sass-js-ghpages-dependency-DwrOzJtCmV)
 - Live Site URL: [Live Site](https://chriskorsak.github.io/intro-component-with-signup-form-master/)
 
 ## My process
