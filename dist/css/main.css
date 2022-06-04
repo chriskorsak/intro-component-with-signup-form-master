@@ -101,11 +101,14 @@ section#signup-b .offer {
   width: 100%;
   border-radius: 5px;
 }
-#signup-form input + p,
-#signup-form button + p {
+#signup-form input + p {
   text-align: right;
   font-style: italic;
   font-size: 0.8rem;
+}
+#signup-form button + p {
+  text-align: right;
+  font-style: italic;
 }
 #signup-form input {
   border: 1px solid hsl(246deg, 25%, 77%);

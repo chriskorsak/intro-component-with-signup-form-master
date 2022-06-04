@@ -9,19 +9,17 @@ document.querySelector('#signup-form').addEventListener('submit', e => {
   // get all inputs
   const inputs = document.querySelectorAll('input');
   inputs.forEach(input => {
-    //remove error outline if present from before
+    //remove error styling & message if present from before
     input.parentElement.classList.remove('error');
     input.classList.remove('error-outline');
-    // clear out message if present from before
     input.nextElementSibling && input.nextElementSibling.remove();
     // validate inputs
     const message = validateInput(input);
     if (message) {
       errorMessageCount++;
-      // create a new element with the error just below the input
+      // create error message element and add error styling to input
       const errorMessageP = createMessageElement(message, 'p', 'error');
       input.after(errorMessageP);
-      // update input for error styling
       input.parentElement.classList.add('error');
       input.classList.add('error-outline');
     }
@@ -39,7 +37,7 @@ document.querySelector('#signup-form').addEventListener('submit', e => {
   }
 });
 
-// validate input is filled out and run email validation function
+// Validates inputs
 function validateInput(input) {
   let message;
   // check for empty input
@@ -49,17 +47,14 @@ function validateInput(input) {
   }
   // check for valid email
   if (input.placeholder === 'Email Address') {
-    if (!emailIsValid(input.value)) message = 'Looks like this is not an email';
-    return message;
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value) === false) {
+      message = 'Looks like this is not an email';
+      return message;
+    }
   }
 }
 
-// email validation
-function emailIsValid(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-// create message element
+// Creates a message element to add to page
 function createMessageElement(message, elementType, className) {
   const element = document.createElement(elementType);
   element.textContent = message;

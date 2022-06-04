@@ -97,11 +97,14 @@ section#signup-b {
   }
 
   // this selects the possible error or success message paragraph
-  input + p,
-  button + p {
+  input + p {
     text-align: right;
     font-style: italic;
     font-size: 0.8rem;
+  }
+  button + p {
+    text-align: right;
+    font-style: italic;
   }
 
   input {
